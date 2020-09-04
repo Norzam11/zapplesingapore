@@ -1,0 +1,885 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="shortcut icon" href="img/logo.ico">
+
+    <title>Singapore Zapplerepair</title>
+
+    <!-- My CSS -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+          font-family: "Roboto", sans-serif;
+        }
+
+        h1,h3,h5,h6, .nav-link {
+          font-family: 'Montserrat', sans-serif;
+        }
+        
+        .nav-link {
+          font-size: 14px;
+          font-weight: 500;
+        }
+
+        #top-header {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: #DC483A;
+            
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: block;
+        }
+
+        .header-link li {
+            font-size: 12px;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .header-link a {
+            color: #FFF;
+        }
+
+        .header-link a:hover {
+            color: black;
+        }
+
+        a:hover {
+          text-decoration: none;
+        }
+
+        a {
+            cursor: pointer;
+          
+        }
+
+        .fa {
+            margin-right: 5px;
+            font-size: 14px;
+        }
+
+        .header-logo {
+            float: left;
+            padding: 10px 0;
+            margin-left: -15px;
+        }
+
+        .navbar-dark {
+            background-color: #DC483A;
+        }
+
+        .navigasi li {
+            padding-right: 10px;
+        }
+
+        section, footer {
+          padding-top: 30px;
+          padding-bottom: 30px;
+          border-bottom: 1px solid #DC483A;
+        }
+
+        .section-title h3 {
+          margin-bottom: 15px;
+        }
+
+        .black-overlay{
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background: rgba(0,0,0,.5);
+        }
+
+        .about-main p {
+          line-height: 40px;
+        }
+
+        .card {
+          height: 100%;
+          width: 100%;
+          transition: box-shadow .3s;
+          border-radius:10px;
+          border: 1px solid #ccc;
+          background: #fff;
+          float: left;
+        }
+
+        .card:hover {
+          box-shadow: 0 0 15px rgba(108, 122, 137, 1);
+        }
+       
+        .card-title, .card-body h5 {
+          text-align: center;
+        }
+
+        .list-group-item {
+          font-size: 14px;
+        }
+
+        .list-group-item i {
+          font-size: 16px;
+          margin-right: 10px;
+          margin-left: -10px;
+        }
+
+        footer {
+          background-color: #DC483A;
+          color: #fff;
+        }
+
+        .footer-links li i {
+          margin-right: 10px;
+        }
+
+        .footer-links a {
+          color: #fff;
+        }
+
+        .footer-links a:hover {
+          color: black;
+
+        }
+        .section {
+          margin-top: 10px;  
+        }
+
+        .footer-line{
+          border-top: 1px solid rgba(241, 238, 238, 0.2);
+        }
+
+        .copyright {
+          padding-top: 10px;
+        }
+
+        .card-text {
+          font-size: 14px;
+          text-align: left;
+        }
+
+        .list-group-item img {
+          width: 150px;
+        }
+
+        .list-group-item a {
+          color: black;
+        }
+
+        .list-group-item a:hover {
+          font-weight: bolder;
+        }
+
+        .card-body button {
+          background-color: #DC483A;
+        }
+
+        .card-body button:hover {
+          background-color: #ee200d;
+        }
+
+        .service a {
+          color: black;
+        }
+
+        .form-inline button:hover {
+          background-color:  #DC483A;
+        }
+
+        html {
+          scroll-behavior: smooth;
+        }
+
+        #toTopBtn {
+            position: fixed;
+            bottom: 26px;
+            right: 39px;
+            z-index: 98;
+            padding: 21px;
+            background-color: hsla(5, 76%, 62%, .8)
+        }
+
+        .js .cd-top--fade-out {
+            opacity: .5
+        }
+
+        .js .cd-top--is-visible {
+            visibility: visible;
+            opacity: 1
+        }
+
+        .js .cd-top {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .3s, visibility .3s, background-color .3s
+        }
+
+        .cd-top {
+            position: fixed;
+            bottom: 20px;
+            bottom: var(--cd-back-to-top-margin);
+            right: 20px;
+            right: var(--cd-back-to-top-margin);
+            display: inline-block;
+            height: 40px;
+            height: var(--cd-back-to-top-size);
+            width: 40px;
+            width: var(--cd-back-to-top-size);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .05) !important;
+            background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1571057658/cd-top-arrow.svg) no-repeat center 50%;
+            background-color: hsla(5, 76%, 62%, .8);
+            background-color: hsla(var(--cd-color-3-h), var(--cd-color-3-s), var(--cd-color-3-l), 0.8)
+        }
+
+        .fa-chevron-left,
+        .fa-chevron-right {
+          color: red;
+          font-size: larger;
+          margin-top: -10px;
+          margin-right: 40px;
+        } 
+
+        .carousel-caption {
+          top: 180px;
+        }
+
+        @media (max-width: 576px) {
+
+          .text-center {
+            margin: auto;
+          }
+          
+          .navbar-nav li {
+            text-align: center;
+            padding-top: 10px;
+          }
+
+          .logo img {
+            width: 80%;
+            height: auto;
+            margin: 0 40px;
+          }
+
+          .form-inline input {
+            width: 80%;
+          }
+
+          .form-inline {
+            margin: auto;
+          }
+
+          .navbar-toogler {
+            width: 100%;
+            float: none;
+            margin: 0 40px;
+            
+          }
+
+          .header img {
+            width: auto;
+            height: 150px;
+          }
+
+          h3 {
+            font-size: 20px;
+          }
+
+          h5 {
+            font-size: 18px ;
+          }
+
+          h6 {
+            font-size: 14px;
+          }
+
+          p {
+            font-size: 12px;
+          }
+
+          .card-body button {
+            font-size: small;
+          }
+
+          .promo img {
+            width: 50%;
+            height: auto;
+            margin: auto;
+          }
+
+          .card-text, p {
+            font-size: small;
+          }
+
+          .list-group-item img {
+            width: 100px;
+          }
+
+          #promo .section-title {
+            width: 50%;
+          }
+
+          .fa-chevron-left {
+            margin-top: -50px;  
+            margin-left: 35rem;
+          }
+
+          .fa-chevron-right {
+            margin-top: -50px;  
+            margin-left: 2em;
+          }
+        }
+
+
+       
+    </style>
+  </head>
+  <body id="home">  
+    <!-- HEADER -->
+    <header>
+        <!-- TOP HEADER -->
+        <div id="top-header">
+            <div class="container">
+                <ul class="header-link">
+                    <li><a href="mailto:zapplerepair@gmail.com"><i class="fa fa-envelope"></i>zapplerepair@gmail.com</a></li>
+                    <li><a href="https://wa.link/53oiqy" target="_blank"><i class="fa fa-whatsapp"></i>+65 8388 8781</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- MAIN HEADER -->
+        <div id="main-header">
+          <div class="container">
+            <div class="navbar top">
+              <div class="header-logo">
+                <a href="index.php" class="logo">
+                  <img src="img/zapplerepairLogo.png" alt="" >
+                </a>
+              </div>
+              <form class="form-inline" action ="controller.php" method="POST">
+                <input class="form-control mr-sm-2 input" type="search" placeholder="Search" id="search" name="search">
+                <button class="btn btn-outline-danger my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- NAVIGASI -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <div class="text-center">
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav navigasi mx-auto">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="index.php">Home<span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="">Trade-in Buy & Sell</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="">Apple Repair</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="">Harddisk SSD Data Recovery</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="">Windows Surface Repair</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="https://singapore.zapplerepair.com/onsite/">Onsite Repair</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="">Office Support</a>
+                      </li>
+                    </ul>
+                  </div>
+            </div>   
+        </nav>
+    </header>
+    <!-- SLIDER -->
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">    
+        <div class="carousel-inner header">
+          <div class="carousel-item active">
+            <img src="img/apple2.jpg" class="d-block w-100" alt="slider promo">
+            <div class="black-overlay"></div>
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Sales of Apple Product</h1>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/1.jpg" class="d-block w-100" alt="slider promo">
+            <div class="black-overlay"></div>
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Apple & Surface Repair Center</h1>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/data recovery.jpg" class="d-block w-100" alt="slider promo">
+            <div class="black-overlay"></div>
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Data Recovery Center</h1>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ABOUT SECTION -->
+      <section id="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="section-title">
+                <h3 class="title">ABOUT ZAPPLEREPAIR</h3>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8">
+              <div class="about-main">
+                <p>We, Macbook Repair Singapore are specialist in repairing <u>Apple and Windows products</u>, such as <u>iPad, iPhone, iMac, Mac Mini, 
+                  Mac Pro dan Macbook, Surface Pro, Surface Book etc </u>. As we have years of experience in this field, you can come to us with 
+                  your problems and we will help to get a solution to it. Within the shortest turnaround time, we'll make your Mac and Window 
+                  perform. You will get the fastest solution at the affordable price ranges. Make contact with us to get effective solutions.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="about-secondary">
+                <ul class="list-group list-group-flush text-center">
+                  <li class="list-group-item"><h6>Trade-in, Buy & Sell Gadget</h6></li>
+                  <li class="list-group-item"><h6>Repair Apple Product</h6></li>
+                  <li class="list-group-item"><h6>Repair Windows Surface Product</h6></li>
+                  <li class="list-group-item"><h6>Data Recovery Service</h6></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PROMO SECTION -->
+      <section id="promo">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-11">
+              <div class="section-title">
+                <h3 class="title">PROMO</h3>
+              </div>
+            </div>
+            <div class="col-md-1 control">
+              <div class="control">
+                <a class="carousel-control-prev" href="#inam" role="button" data-slide="prev">
+                  <span class="fa fa-chevron-left fa-lg" ></span>
+                </a>
+                <a class="carousel-control-next" href="#inam" role="button" data-slide="next">
+                  <span class="fa fa-chevron-right fa-lg" ></span>
+                </a> 
+              </div>
+            </div> 
+          </div>
+          <!-- Carousel Product -->
+          <div class="row product">
+            <div class="col-sm-12">
+              <div id="inam" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner promo">
+                  <!-- First Group -->
+                  <div class="carousel-item active">
+                    <div class="row">
+                      <div class="col-md-3 mb-3">
+                        <div class="card text-center">
+                          <img src="img/ipad1.jpg" class="card-img-top mt-2" alt="">
+                          <div class="card-body">
+                            <h5 class="card-title">iPad 2</h5>
+                            <h6 class="card-title">S$ 161,19</h6>
+                            <p class="card-text">iPad 2 16GB 3G Wifi iOS 8 iCloud Safe Condition 85% Seamless Working Condition 100% Guarantee 1 month</p>
+                            <button type="button" class="btn btn-danger"><i class="fa fa-shopping-cart"></i> Buy</button>   
+                          </div>   
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <div class="card text-center">
+                          <img src="img/ipad2.jpg" class="card-img-top mt-2" alt="">
+                          <div class="card-body">
+                            <h5 class="card-title">iPad 2</h5>
+                            <h6 class="card-title">S$ 161,19</h6>
+                            <p class="card-text">iPad 2 16GB 3G Wifi iOS 8 iCloud Safe Condition 85% Seamless Working Condition 100% Guarantee 1 month</p>
+                            <button type="button" class="btn btn-danger"><i class="fa fa-shopping-cart"></i> Buy</button>   
+                          </div>   
+                        </div>   
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <div class="card text-center">
+                          <img src="img/ipad3.jpg" class="card-img-top mt-2" alt="">
+                          <div class="card-body">
+                            <h5 class="card-title">iPad 2</h5>
+                            <h6 class="card-title">S$ 161,19</h6>
+                            <p class="card-text">iPad 2 16GB 3G Wifi iOS 8 iCloud Safe Condition 85% Seamless Working Condition 100% Guarantee 1 month</p>
+                            <button type="button" class="btn btn-danger"><i class="fa fa-shopping-cart"></i> Buy</button>   
+                          </div>   
+                        </div>   
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <div class="card text-center">
+                          <img src="img/ipad4.jpg" class="card-img-top mt-2" alt="">
+                          <div class="card-body">
+                            <h5 class="card-title">iPad 2</h5>
+                            <h6 class="card-title">S$ 161,19</h6>
+                            <p class="card-text">iPad 2 16GB 3G Wifi iOS 8 iCloud Safe Condition 85% Seamless Working Condition 100% Guarantee 1 month</p>
+                            <button type="button" class="btn btn-danger"><i class="fa fa-shopping-cart"></i> Buy</button>   
+                          </div>   
+                        </div>   
+                      </div>
+                    </div>
+                  </div>
+                       
+                  <!-- Second Group -->
+                  <div class="carousel-item">      
+                    <div class="row">
+                      <div class="col-md-3 mb-3">
+                        <div class="card text-center">
+                          <img src="img/iphone1.jpg" class="card-img-top mt-2" alt="">
+                          <div class="card-body">
+                            <h5 class="card-title">iPad 2</h5>
+                            <h6 class="card-title">S$ 161,19</h6>
+                            <p class="card-text">iPad 2 16GB 3G Wifi iOS 8 iCloud Safe Condition 85% Seamless Working Condition 100% Guarantee 1 month</p>
+                            <button type="button" class="btn btn-danger"><i class="fa fa-shopping-cart"></i> Buy</button>   
+                          </div>   
+                        </div>   
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <div class="card text-center">
+                          <img src="img/iphone2.jpg" class="card-img-top mt-2" alt="">
+                          <div class="card-body">
+                            <h5 class="card-title">iPad 2</h5>
+                            <h6 class="card-title">S$ 161,19</h6>
+                            <p class="card-text">iPad 2 16GB 3G Wifi iOS 8 iCloud Safe Condition 85% Seamless Working Condition 100% Guarantee 1 month</p>
+                            <button type="button" class="btn btn-danger"><i class="fa fa-shopping-cart"></i> Buy</button>   
+                          </div>   
+                        </div>   
+                      </div>
+                      <div class="col-md-3 mb-3">
+                        <div class="card text-center">
+                          <img src="img/iphone3.jpg" class="card-img-top mt-2" alt="">
+                          <div class="card-body">
+                            <h5 class="card-title">iPad 2</h5>
+                            <h6 class="card-title">S$ 161,19</h6>
+                            <p class="card-text">iPad 2 16GB 3G Wifi iOS 8 iCloud Safe Condition 85% Seamless Working Condition 100% Guarantee 1 month</p>
+                            <button type="button" class="btn btn-danger"><i class="fa fa-shopping-cart"></i> Buy</button>   
+                          </div>   
+                        </div>   
+                      </div>
+                      <div class="col-md-3  mb-3">
+                        <div class="card text-center">
+                          <img src="img/iphone2.jpg" class="card-img-top mt-2" alt="">
+                          <div class="card-body">
+                            <h5 class="card-title">iPad 2</h5>
+                            <h6 class="card-title">S$ 161,19</h6>
+                            <p class="card-text">iPad 2 16GB 3G Wifi iOS 8 iCloud Safe Condition 85% Seamless Working Condition 100% Guarantee 1 month</p>
+                            <button type="button" class="btn btn-danger"><i class="fa fa-shopping-cart"></i> Buy</button>   
+                          </div>   
+                        </div>   
+                      </div>
+                    </div>
+                  </div>        
+                </div> 
+                <div class="control">
+                  <!-- <a href="#inam" class="carousel-control-prev" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                  </a>
+                  <a href="#inam" class="carousel-control-next" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                  </a> -->
+
+                  <!-- <a class="carousel-control-prev" href="#inam" role="button" data-slide="prev">
+                    <span class="fa fa-chevron-left fa-lg" ></span>
+                  </a>
+                  <a class="carousel-control-next" href="#inam" role="button" data-slide="next">
+                    <span class="fa fa-chevron-right fa-lg" ></span>
+                  </a> -->
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div>
+      </section>
+      <!-- SERVICE SECTION -->
+      <section id="service">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="section-title">
+                <h3 class="title">OUR BUSSINESS</h3>
+              </div>
+            </div>
+          </div>
+          <div class="row service">
+            <div class="col-md-4 card-service mb-3">
+              <a href="https://www.zapplerepair.com/applerepair.html" target="_blank">
+                <div class="card" >
+                  <img src="img/iphone7promo.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5>iPhone Service</h5>
+                    <hr>
+                    <p class="card-text">We take in repair replacement service for all Apple product like Apple Watch, iPad, iPhone, ipod, iMac, Mac Mini, Mac Pro and
+                       Macbook etc. Supported by complete sparepart and experienced technician making Zapplerepair the preffered Apple service center in Singapore since 2009.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 card-service mb-3">
+              <a href="https://www.zapplerepair.com/surfacerepair.html" target="_blank">
+                <div class="card">
+                  <img src="img/surfaceRepairPromo.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5>Windows Surface Service</h5>
+                    <hr>
+                    <p class="card-text">Window Surface is the current work and life style for the fast Singaporean let Zapplerepair handle your out 
+                      of warranty Window Surface in hardware or software.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 card-service mb-3">
+              <a href="https://zapplerepair.com/macbookprorepair.html" target="_blank">
+                <div class="card" >
+                  <img src="img/Macbook Repair Service Centre.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5>Macbook Repair</h5>
+                    <hr>
+                    <p class="card-text">Sometimes even the best computing machines need a little tender care. Though Mac's and PC's look different on the outside, on the physical level, the internals 
+                      are quite the same. So, the components of Macbook's and Mac's wear out just like PC components do, and that's where most problems come from. We at Zapplerepair provide top-notch 
+                      apple repair in Singapore. </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 card-service mb-3">
+              <a href="https://zapplerepair.com/iMac-Macbook-data-recovery-service-harddisk-hdd-ssd-Singapore.html" target="_blank">
+                <div class="card" >
+                  <img src="img/Data Recovery Service Centre.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5>Data Recovery Service</h5>
+                    <hr>
+                    <p class="card-text">Data loss doesn't have to be permanent and it doesn't have to be beyond the reach of all. At Zapplerepair, we pledge to provide you with the 
+                      fastest and most reliable Mac data recovery in Singapore. Our hard disk recovery service makes use of industry-best data recovery tools and tested methods that 
+                      provide quick and guaranteed resolution. Our Mac data recovery service come with a strict no data, no charge guarantee so you only pay if you're satisfied with the results.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 card-service mb-3">
+              <a href="" target="_blank">
+                <div class="card" >
+                  <img src="img/Gaming Laptop Service Centre.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5>Gaming Laptop Repair</h5>
+                    <hr>
+                    <p class="card-text">Zapplerepair offers full range of services related to gaming laptop repair in Singapore. Our trained technicians offer industry-best repairs for 
+                      all kinds of laptop problems, be it screen replacement, motherboard replacement, data backup, wireless network issues, configuration problems or even virus issues. 
+                      Our laptop repair technicians offer pick up and delivery service - perfect for urgent and instant repair of laptops.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 card-service mb-3">
+              <a href="" target="_blank">
+                <div class="card" >
+                  <img src="img/Computer Disposal Service Centre.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5>Macbook iMac Disposal Service</h5>
+                    <hr>
+                    <p class="card-text">Getting rid of old Mac is a global issue and a problem for entrepreneurs and companies looking to get rid of electronic waste like iMac, Macbook and more. 
+                      Zapplerepair offers affordable Mac disposal service in Singapore right at Your home or office that we may even pay Your Mac. We believe in data destruction done right and thus 
+                      take extra precaution to protect the data of our customers.</p>
+                  </div>
+                </div>
+              </a>
+            </div> 
+            <div class="col-md-4 card-service mb-3">
+              <a href="https://zapplerepair.com/office-iMac-Macbook-Computer-data-security-performance-monthly-personal-home-service.html" target="_blank">
+                <div class="card" >
+                  <img src="img/officeOnsiteRepairPromo.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5>Complete Extended Hardware Service for Bussinerss</h5>
+                    <hr>
+                    <p class="card-text">We are the best solution for small and medium company which do not have full IT support to cover problems in faulty hardware in addition we also can make 
+                      affordable mobile application, website, seo and software plus hardware customise automation for Business.</p>
+                  </div>
+                </div>
+              </a>
+            </div>            
+          </div>  
+        </div>
+      </section>
+      <!-- STORE SECTION -->
+      <section id="store">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="section-title">
+                <h3 class="title">OUR STORE</h3>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Office Singapore Central</h5>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="fa fa-map-marker"></i>41 Jalan Pemimpin #02-04 <br> <i class="fa fa-map-marker" style="color:#FFF"></i>S(577186), Marymount MRT exit B  
+                      <br><i class="fa fa-map-marker" style="color:#FFF"></i><a href="https://s.id/qjSqx">View google maps</a></li>
+                    <li class="list-group-item"><i class="fa fa-clock-o"></i>Everyday : 8AM - 5PM <br> <i class="fa fa-map-marker" style="color:#FFF"></i></li>
+                    <li class="list-group-item"><i class="fa fa-envelope"></i>zapplerepair@gmail.com</li>
+                    <li class="list-group-item"><i class="fa fa-phone"></i>+65 83888781 (Hotline)</li>
+                    <li class="list-group-item mx-auto"><a href="https://wa.link/53oiqy" target="_blank"><img src="img/logo-wa-png-fix-300x100.png" ></a></li>
+                    <!-- <li class="list-group-item"><i class="fa fa-whatsapp"></i><a href="https://wa.link/53oiqy" target="_blank"></i>Call via Whatsapp</a></li> -->
+                  </ul>
+                </div>
+              </div>
+            </div>               
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Soho Singapore East</h5>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="fa fa-map-marker"></i>25 Lor 25A Geylang, #03-00 <br> <i class="fa fa-map-marker" style="color:#FFF"></i>S(388230),Aljunied MRT  
+                      <br><i class="fa fa-map-marker" style="color:#FFF"></i><a href="https://s.id/qjRlI">View google maps</a></li>
+                    <li class="list-group-item"><i class="fa fa-clock-o"></i>Everyday : 8AM - 11PM <br> <i class="fa fa-map-marker" style="color:#FFF"></i> Open only by Appoinment </li>
+                    <li class="list-group-item"><i class="fa fa-envelope"></i>zapplerepair@gmail.com</li>
+                    <li class="list-group-item"><i class="fa fa-phone"></i>+65 83888781 (Hotline)</li>
+                    <li class="list-group-item mx-auto"><a href="https://wa.link/53oiqy" target="_blank"><img src="img/logo-wa-png-fix-300x100.png" "></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Shop Singapore CBD</h5>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="fa fa-map-marker"></i>138 Robinson Road #03-64 <br> <i class="fa fa-map-marker" style="color:#FFF"></i>S(068906),Tanjong Pagar MRT exit F
+                      <br><i class="fa fa-map-marker" style="color:#FFF"></i><a href="https://s.id/qjR9-">View google maps</a></li>
+                    <li class="list-group-item"><i class="fa fa-clock-o"></i>Monday - Friday : 10.30AM - 7.30PM <br> <i class="fa fa-map-marker" style="color:#FFF"></i> Saturday - Sunday : Close</li>
+                    <li class="list-group-item"><i class="fa fa-envelope"></i>zapplerepair@gmail.com</li>
+                    <li class="list-group-item"><i class="fa fa-phone"></i>+65 83888781 (Hotline)</li>
+                    <li class="list-group-item mx-auto"><a href="https://wa.link/53oiqy" target="_blank"><img src="img/logo-wa-png-fix-300x100.png"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FOOTER -->
+      <footer id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="footer">
+                <h5 class="footer-title">Information</h5>
+                <ul class="footer-links mb-3">
+                  <li><a href="https://zapplerepair.com/tradein-cashin-pricelist.html" target="_blank">Trade-in Buy & Sell</a></li>
+                  <li><a href="https://singapore.zapplerepair.com/onsite/" target="_blank">Onsite Repair</a></li>
+                  <li><a href="https://zapplerepair.com/iMac-Macbook-data-recovery-service-harddisk-hdd-ssd-Singapore.html" target="_blank">Data Recovery</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="footer">
+                <h5 class="footer-title">Services</h5>
+                <ul class="footer-links mb-3">
+                  <li><a href="https://zapplerepair.com/applerepair.html" target="_blank">iPhone</a></li>
+                  <li><a href="https://zapplerepair.com/macbookrepair.html" target="_blank">Macbook</a></li>									
+                  <li><a href="https://www.zapplerepair.com/surfacerepair.html" target="_blank">Windows Surface</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="footer">
+                <h5 class="footer-title">Social Media</h5>
+                <ul class="footer-links">
+                  <li><a href="#" target="_blank"><i class="fa fa-facebook-official"></i>Facebook</a></li>
+                  <li><a href="#" target="_blank"><i class="fa fa-instagram"></i>Instagram</a></li>									
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-line">
+
+      <!-- bottom footer -->
+      <div id="bottom-footer" class="section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">							
+              <span class="copyright">								
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> Zapplerepair	Singapore					
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </footer>
+
+      <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $('.carousel').carousel({
+            interval: 5000;
+        });
+    </script>
+    <script>
+      $(document).ready(function() {
+      $(window).scroll(function() {
+      if ($(this).scrollTop() > 20) {
+      $('#toTopBtn').fadeIn();
+      } else {
+      $('#toTopBtn').fadeOut();
+      }
+      });
+
+      $('#toTopBtn').click(function() {
+      $("html, body").animate({
+      scrollTop: 0
+      }, 1000);
+      return false;
+      });
+      });
+    </script>
+    <script>
+      $( '.navbar-nav a' ).on( 'click', function () {
+	    $( '.navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
+	    $( this ).parent( 'li' ).addClass( 'active' );
+      });
+    </script>
+  </body>
+</html>
